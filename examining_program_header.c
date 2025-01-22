@@ -37,6 +37,11 @@ void print_ptype(size_t pt)
         C(TLS);
         C(SUNWBSS);
         C(SUNWSTACK);
+        C(GNU_EH_FRAME);
+        C(GNU_PROPERTY);
+        C(GNU_RELRO);
+        C(GNU_SFRAME);
+        C(GNU_STACK);
         //        C(SUNWDTRACE);
         //        C(SUNWCAP);   PT_SUNWBSS and PT_SUNWSTACK not found in linux platform
     default:
@@ -44,6 +49,7 @@ void print_ptype(size_t pt)
         break;
     }
 #undef C
+    printf("  %s  ", s);
 }
 int main(int argc, char **argv)
 {
